@@ -6,17 +6,7 @@ app = Flask(__name__)
 app.secret_key = 'supersecretkey'  # Change this to a more secure key
 
 # Connect to MySQL database
-conn = MySQLdb.connect(
-    host='localhost',
-    user='root',
-    passwd='',
-    db='test',
-    unix_socket='/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock',
-    cursorclass=MySQLdb.cursors.DictCursor
-)
 
-
-cursor = conn.cursor()
 
 @app.route('/')
 @app.route('/index.html')
